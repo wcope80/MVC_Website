@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "MaxCalculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MaxCalculator</h2>
+<div class="form-horizontal">
+    <fieldset>
+
+                
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="repsinput">Reps</label>
+            <div class="controls">
+                <input id="repsinput" name="repsInput" type="text" placeholder="" class="input-mini">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="weightinput">Weight</label>
+            <div class="controls">
+                <input id="weightinput" name="weightinput" type="text" placeholder="" class="input-mini">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="maxinput">Max</label>
+            <div class="controls">
+                <input id="maxinput" name="maxinput" type="text" placeholder="max" class="input-mini" readonly="true">
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="control-group">
+            <label class="control-label" for="calcbutton"></label>
+            <div class="controls">
+                <button id="calcbutton" name="calcbutton" class="btn btn-info">Calculate</button>
+            </div>
+        </div>
+
+    </fieldset>
+</div>
+
+
+<script type="text/javascript">
+    $("#calcbutton").click(function () {
+        var weight = parseInt($('#weightinput').val());
+        var reps = parseInt($('#repsinput').val());
+       
+        var multiplier = .03333
+        var max = multiplier * weight * reps + weight
+        $("#maxinput").val(max)
+     });
+
+    
+
+</script>
