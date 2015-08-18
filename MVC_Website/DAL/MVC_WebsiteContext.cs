@@ -11,11 +11,6 @@ namespace MVC_Website.DAL
         {
         }
 
-
-        public DbSet<HelpModel> Help { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
+       public DbSet<MaxAttempt> MaxAttempts { get; set; }  
     }
 }

@@ -9,7 +9,7 @@ namespace MVC_Website.Controllers
 {
     public class HelpController : Controller
     {
-        private MVC_WebsiteContext db = new MVC_WebsiteContext();
+        //private MVC_WebsiteContext db = new MVC_WebsiteContext();
         // GET: Help
         public ActionResult Index()
         {
@@ -23,7 +23,7 @@ namespace MVC_Website.Controllers
 
         public ActionResult ContactUsIndex()
         {
-            return View(db.Help.ToList());
+            return View();
         }
     }
 }

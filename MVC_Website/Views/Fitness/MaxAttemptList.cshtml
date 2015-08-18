@@ -1,0 +1,32 @@
+﻿@model MVC_Website.Models.MaxAttempt 
+@{
+    ViewBag.Title = "MaxAttemptList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MaxAttemptList</h2>
+
+
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Exercise)</th>
+        <th>@Html.DisplayNameFor(m => m.Weight)</th>
+        <th>@Html.DisplayNameFor(m => m.Reps)</th>
+        <th>@Html.DisplayNameFor(m => m.CalculatedMax)</th>
+        <th>@Html.DisplayNameFor(m => m.MaxDate)</th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(m => m.Exercise)</td>
+        <td>@Html.DisplayFor(m => m.Weight)</td>
+        <td>@Html.DisplayFor(m => m.Reps)</td>
+        <td>@Html.DisplayFor(m => m.CalculatedMax)</td>
+        <td>@Html.DisplayFor(m => m.MaxDate)</td>
+    </tr>
+
+
+}
+
+
+</table>
