@@ -9,6 +9,8 @@ namespace MVC_Website.Controllers
 {
     public class HomeController : Controller
     {
+        public DAL.MVC_WebsiteContext db = new DAL.MVC_WebsiteContext();
+
         public ActionResult Index()
         {
             return View();
@@ -32,6 +34,20 @@ namespace MVC_Website.Controllers
         {
             Message message = new Message();
             return View(message);
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(Message msg)
+        {
+            try
+            {
+                db.Messages.Add(msg);
+                return RedirectToAction("Contact", "Home");
+            }
+            catch
+            {
+                return View(msg);
+            }
         }
     }
 }
