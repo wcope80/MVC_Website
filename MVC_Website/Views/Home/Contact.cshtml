@@ -1,10 +1,11 @@
 ﻿@{
-    ViewBag.Title = "William A. Cope";
+    ViewBag.Title = "Allan Cope";
 }
-<h2>@ViewBag.Title.</h2>
+@*<h2>@ViewBag.Title.</h2>*@
 <h3>@ViewBag.Message</h3>
 
 <address>
+    William Allan Cope
     7747 Crooked Road St.<br />
     San Antonio, TX 78254<br />
     <abbr title="Phone">P:</abbr>
@@ -13,5 +14,7 @@
 
 <address>
     <strong>Email:</strong>   <a href="mailto:williamacope@gmail.com">WilliamACope@gmail.com</a><br />
-    @*<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>*@
+    <strong>GitHub:</strong>  <a href="https://github.com/wcope80">WCope80</a><br />
 </address>
+
+<a class="btn btn-small btn-primary" href="@Url.Action("SendMessage","Home")">Send Message <i class="glyphicon glyphicon-send white"></i></a>

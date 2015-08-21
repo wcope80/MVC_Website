@@ -1,4 +1,4 @@
-﻿@model MVC_Website.Models.MaxAttempt 
+﻿@model IEnumerable<MVC_Website.Models.MaxAttempt>
 @{
     ViewBag.Title = "MaxAttemptList";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,8 +7,8 @@
 <h2>MaxAttemptList</h2>
 
 
-
-<table>
+<a class="btn btn-small btn-primary" href="@Url.Action("MaxAttemptInput","Fitness")">Add Attempt <i class="icon icon-white icon-plus-sign"></i></a>
+<table class="table table-striped">
     <tr>
         <th>@Html.DisplayNameFor(m => m.Exercise)</th>
         <th>@Html.DisplayNameFor(m => m.Weight)</th>
@@ -18,11 +18,11 @@
     </tr>
 @foreach (var item in Model) {
     <tr>
-        <td>@Html.DisplayFor(m => m.Exercise)</td>
-        <td>@Html.DisplayFor(m => m.Weight)</td>
-        <td>@Html.DisplayFor(m => m.Reps)</td>
-        <td>@Html.DisplayFor(m => m.CalculatedMax)</td>
-        <td>@Html.DisplayFor(m => m.MaxDate)</td>
+        <td>@item.Exercise</td>
+        <td>@item.Weight</td>
+        <td>@item.Reps</td>
+        <td>@item.CalculatedMax</td>
+        <td>@item.MaxDate</td>
     </tr>
 
 

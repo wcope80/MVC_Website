@@ -11,6 +11,7 @@ namespace MVC_Website.DAL
         {
         }
 
-       public DbSet<MaxAttempt> MaxAttempts { get; set; }  
+       public DbSet<MaxAttempt> MaxAttempts { get; set; }
+       public DbSet<Message> Messages { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,7 @@ namespace MVC_Website.Models
 
     public class MaxAttempt
     {
+        [Key]
         public int MaxAttemptId { get; set; }
         public string Exercise { get; set; }
         public int Weight { get; set; }

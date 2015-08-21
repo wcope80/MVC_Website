@@ -176,9 +176,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MaxAttemptsController.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FitnessModels.cs" />
     <Compile Include="Models\HelpModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -244,6 +246,12 @@
     <Content Include="Views\Help\ContactUs.cshtml" />
     <Content Include="Views\Fitness\MaxAttemptList.cshtml" />
     <Content Include="Views\Fitness\MaxAttemptInput.cshtml" />
+    <Content Include="Views\MaxAttempts\Create.cshtml" />
+    <Content Include="Views\MaxAttempts\Delete.cshtml" />
+    <Content Include="Views\MaxAttempts\Details.cshtml" />
+    <Content Include="Views\MaxAttempts\Edit.cshtml" />
+    <Content Include="Views\MaxAttempts\Index.cshtml" />
+    <Content Include="Views\Home\SendMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

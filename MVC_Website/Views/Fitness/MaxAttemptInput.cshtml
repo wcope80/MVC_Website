@@ -1,21 +1,23 @@
-﻿
+﻿@model MVC_Website.Models.MaxAttempt
+
 @{
     ViewBag.Title = "MaxAttemptInput";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@using (Html.BeginForm("MaxAttemptInput", "Fitness", FormMethod.Post))
+{
 <form class="form-inline">
     <fieldset>
-       <br />
-        <!-- Form Name -->
+       <!-- Form Name -->
         <legend>Max Attempt Input</legend>
 
         <!-- Text input-->
         <div class="control-group">
             <label class="control-label" for="txt_Exercise">Exercise</label>
             <div class="controls">
-                <input id="txt_Exercise" name="txt_Exercise" type="text" placeholder="" class="input-medium" required="">
-                <p class="help-block">Enter Exercise</p>
+                @Html.DropDownListFor(m => m.Exercise, (SelectList)ViewBag.exerciseList, "Select")
+                <p class="help-block">Select Exercise</p>
             </div>
         </div>
 
@@ -23,7 +25,7 @@
         <div class="control-group">
             <label class="control-label" for="txt_Weight">Weight:</label>
             <div class="controls">
-                <input id="txt_Weight" name="txt_Weight" type="text" placeholder="" class="input-small">
+                @Html.EditorFor(m => m.Weight)
                 <p class="help-block">Enter weight.</p>
             </div>
         </div>
@@ -32,14 +34,14 @@
         <div class="control-group">
             <label class="control-label" for="txt_Reps">Reps</label>
             <div class="controls">
-                <input id="txt_Reps" name="txt_Reps" type="text" placeholder="" class="input-small">
+                @Html.EditorFor(m => m.Reps)
                 <p class="help-block">Enter reps.</p>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="txt_Date">Date</label>
             <div class="controls">
-                <input id="txt_Date" name="txt_Date" type="text" placeholder="" class="input-small">
+                @Html.EditorFor(m => m.MaxDate)
                 <p class="help-block">Enter Date.</p>
             </div>
         </div>
@@ -53,5 +55,6 @@
 
     </fieldset>
 </form>
+}
 
 

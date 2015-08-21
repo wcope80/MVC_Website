@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC_Website.Models;
 
 namespace MVC_Website.Controllers
 {
@@ -22,9 +23,15 @@ namespace MVC_Website.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "My Contact Info:";
 
             return View();
+        }
+
+        public ActionResult SendMessage()
+        {
+            Message message = new Message();
+            return View(message);
         }
     }
 }
