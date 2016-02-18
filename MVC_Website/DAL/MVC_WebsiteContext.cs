@@ -13,5 +13,7 @@ namespace MVC_Website.DAL
 
        public DbSet<MaxAttempt> MaxAttempts { get; set; }
        public DbSet<Message> Messages { get; set; }
+       public DbSet<PhotoGallery> PhotoGalleries { get; set; }
+       public DbSet<Gallery> Galleries { get; set; }
     }
 }

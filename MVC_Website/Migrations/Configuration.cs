@@ -9,7 +9,7 @@ namespace MVC_Website.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MVC_Website.DAL.MVC_WebsiteContext context)

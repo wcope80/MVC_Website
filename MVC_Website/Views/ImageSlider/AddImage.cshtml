@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddImage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("AddImage", "ImageSlider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Add Image</legend>
+            <div class="editor-label">
+                Upload Image
+            </div>
+            <div class="editor-field">
+                <input type="file" id="ImagePath" name="ImagePath" />
+             </div>
+            <p>
+                <button class="btn btn-primary" type="submit">Add <i class="glyphicon-plus-sign"/></button>
+           </p>
+        </fieldset>
+}

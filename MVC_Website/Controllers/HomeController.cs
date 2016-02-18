@@ -42,12 +42,19 @@ namespace MVC_Website.Controllers
             try
             {
                 db.Messages.Add(msg);
+                db.SaveChanges();
                 return RedirectToAction("Contact", "Home");
             }
             catch
             {
                 return View(msg);
             }
+        }
+
+        public ActionResult Messages()
+        {
+            
+            return View(db.Messages.ToList());
         }
     }
 }

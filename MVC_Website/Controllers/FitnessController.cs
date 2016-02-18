@@ -38,6 +38,44 @@ namespace MVC_Website.Controllers
             return View(maxAttempt);
         }
 
+        public ActionResult Directory()
+        {
+
+            ClpmDirectory clpmdir = new ClpmDirectory();
+            List<CLPM> clpms = new List<CLPM>();
+            List<CLPM> clpms2 = new List<CLPM>();
+            List<Unit> units = new List<Unit>();
+            CLPM clpm1 = new CLPM();
+            clpm1.name = "bob Smith";
+            clpm1.squadron = "93";
+            clpm1.rank = "TSgt";
+            CLPM clpm2 = new CLPM();
+            clpm2.name = "bob Smith2";
+            clpm2.squadron = "94";
+            clpm2.rank = "TSgt";
+
+            Unit nine3  = new Unit();
+            Unit nine4 = new Unit();
+            
+
+            nine3.unitName = "93d";
+            clpms.Add(clpm1);
+            nine3.Clpms = clpms;
+
+
+            nine4.unitName = "94th";
+            clpms2.Add(clpm2);
+            nine4.Clpms = clpms2;
+            units.Add(nine3);
+            units.Add(nine4);
+            clpmdir.directory = units;
+
+
+
+            return View(clpmdir);
+        }
+
+
         public IEnumerable<SelectListItem> ExerciseList()
 	        {
             List<SelectListItem> exerciseList = new List<SelectListItem>()

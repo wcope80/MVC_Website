@@ -41,7 +41,7 @@
         <div class="control-group">
             <label class="control-label" for="txt_Date">Date</label>
             <div class="controls">
-                @Html.EditorFor(m => m.MaxDate)
+                @Html.TextBoxFor(m => m.MaxDate, new { @id = "maxDate" })
                 <p class="help-block">Enter Date.</p>
             </div>
         </div>
@@ -57,4 +57,7 @@
 </form>
 }
 
+<script type="text/javascript">
+    jQuery('#maxDate').datetimepicker();
+</script>
 

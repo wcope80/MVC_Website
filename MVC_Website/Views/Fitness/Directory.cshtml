@@ -1,0 +1,18 @@
+﻿@model MVC_Website.Models.ClpmDirectory
+
+@{
+    ViewBag.Title = "Directory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (unit in Model)
+{
+	<p>
+			@unit.unitName
+			@foreach(clpm in unit)
+			{
+				<p>@clpm.name</p>
+			}
+	</p>
+}
+

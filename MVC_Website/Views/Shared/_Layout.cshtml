@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jquery.datetimepicker.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/Scripts/Jquery-1.10.2.js")
+    @Scripts.Render("~/Scripts/jquery.datetimepicker.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery.bxslider.js")
+    @RenderSection("scripts", required: false)
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -24,17 +31,35 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fitness<b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Max Calc", "MaxCalculator", "Tools")</li>
-                            <li>@Html.ActionLink("Max Attempts", "MaxAttemptList", "Fitness")</li>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Messages", "Messages", "Home")</li>
+
                         </ul>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Contact Info", "Contact", "Home")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Demos<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Photo Gallery", "PhotoGallery", "PhotoGalleries")</li>
+                                <li>@Html.ActionLink("Image Slider", "Index", "ImageSlider")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fitness<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Max Calc", "MaxCalculator", "Tools")</li>
+                                <li>@Html.ActionLink("Max Attempts", "MaxAttemptList", "Fitness")</li>
+                            </ul>
+                        </li>
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -43,12 +68,11 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Allan's ASP.Net MVC Application</p>
+            <p>&copy; @DateTime.Now.Year Allan Cope</p>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+   
     @RenderSection("scripts", required: false)
 </body>
 </html>

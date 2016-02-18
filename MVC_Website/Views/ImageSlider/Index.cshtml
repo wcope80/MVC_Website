@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MVC_Website.Models.Gallery>
+
+@{
+    ViewBag.Title = "Image Slider";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Image Slider</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("AddImage", "ImageSlider")"> Add Image</a>
+    <a class="btn btn-primary" href="@Url.Action("DeleteImages", "ImageSlider")">Delete Image</a>
+</p>
+
+@Html.Partial("~/Views/ImageSlider/SliderPartial.cshtml", Model)
+
